@@ -6,9 +6,7 @@
 # Output: true
 
 def valid_anagram(string, test):
-    string_list = list(string)
-    test_list = list(test)
-    if sorted(string_list) == sorted(test_list):
+    if sorted(list(string)) == sorted(list(test)):
         return True
     else:
         return False
