@@ -8,9 +8,7 @@
 def valid_anagram(string, test):
     string_list = list(string)
     test_list = list(test)
-    string_list.sort()
-    test_list.sort()
-    if string_list == test_list:
+    if sorted(string_list) == sorted(test_list):
         return True
     else:
         return False
