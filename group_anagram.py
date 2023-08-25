@@ -9,8 +9,7 @@
 def group_anagram(strings):
     sorted_strings = [''.join(sorted(str)) for str in strings]
     for str in sorted_strings:
-        
-    
+        print('hell0')
     pass
 
 strs = ["eat","tea","tan","ate","nat","bat"]

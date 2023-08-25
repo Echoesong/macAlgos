@@ -5,6 +5,9 @@
 # Input: nums = [1,2,3,1]
 # Output: true
 
+from ast import List
+
+
 class Solution:
     def containsDuplicate(self, nums: List[int]) -> bool:
         test_set = set(nums)

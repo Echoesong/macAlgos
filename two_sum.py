@@ -7,9 +7,14 @@
 # Output: [0,1]
 # Explanation: Because nums[0] + nums[1] == 9, we return [0, 1]
 
-def twoSum(nums, target):
-    pass
+# Intuition: Use a cache to store one number on an iteration, see if number + any other numbers = target; I want to avoid a nested loop
+# After evaluating the above, I don't think this is a good solution because it has O(n log n) time complexity due to needing to first recursively divide the array, then merge it after fully divided. The simpler solution is to use a hash map, as below
 
-nums = [2,7,11,15]
-target = 9
-print(twoSum(nums, target))
+def twoSum(nums, target):
+    prev_map = {}
+    for i, num in enumerate(nums):
+        answer = target - num
+        if answer in prev_map:
+            return [prev_map[answer], i]
+        prev_map[num] = i
+    
